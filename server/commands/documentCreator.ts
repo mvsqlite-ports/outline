@@ -107,7 +107,7 @@ export default async function documentCreator({
   return await Document.findOne({
     where: {
       id: document.id,
-      publishedAt: document.publishedAt,
+      publishedAt: document.publishedAt || null,
     },
     rejectOnEmpty: true,
     transaction,
