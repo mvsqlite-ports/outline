@@ -20,7 +20,7 @@ class IntegrationAuthentication extends IdModel {
   @Column
   service: string;
 
-  @Column(DataType.ARRAY(DataType.STRING))
+  @Column(DataType.JSON)
   scopes: string[];
 
   @Column(DataType.BLOB)

@@ -67,10 +67,7 @@ router.post("pins.list", auth(), pagination(), async (ctx) => {
           : { collectionId: { [Op.is]: null } }),
         teamId: user.teamId,
       },
-      order: [
-        Sequelize.literal('"pin"."index" collate "C"'),
-        ["updatedAt", "DESC"],
-      ],
+      order: [Sequelize.literal('"pin"."index"'), ["updatedAt", "DESC"]],
       offset: ctx.state.pagination.offset,
       limit: ctx.state.pagination.limit,
     }),

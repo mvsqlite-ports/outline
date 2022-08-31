@@ -1,15 +1,15 @@
 {
   "development": {
     "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres"
+    "dialect": "sqlite"
   },
   "test": {
     "use_env_variable": "DATABASE_URL_TEST",
-    "dialect": "postgres"
+    "dialect": "sqlite"
   },
   "production": {
     "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres",
+    "dialect": "sqlite",
     "dialectOptions": {
       "ssl": {
         "rejectUnauthorized": false
@@ -18,6 +18,6 @@
   },
   "production-ssl-disabled": {
     "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres"
+    "dialect": "sqlite"
   }
 }

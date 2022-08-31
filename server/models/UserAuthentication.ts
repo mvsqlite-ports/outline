@@ -24,7 +24,7 @@ import Fix from "./decorators/Fix";
 @Table({ tableName: "user_authentications", modelName: "user_authentication" })
 @Fix
 class UserAuthentication extends IdModel {
-  @Column(DataType.ARRAY(DataType.STRING))
+  @Column(DataType.JSON)
   scopes: string[];
 
   @Column(DataType.BLOB)

@@ -156,7 +156,7 @@ class User extends ParanoidModel {
   @Column
   suspendedAt: Date | null;
 
-  @Column(DataType.JSONB)
+  @Column(DataType.JSON)
   flags: { [key in UserFlag]?: number } | null;
 
   @AllowNull

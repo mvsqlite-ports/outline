@@ -199,7 +199,7 @@ class Document extends ParanoidModel {
   @Column
   title: string;
 
-  @Column(DataType.ARRAY(DataType.STRING))
+  @Column(DataType.JSON)
   previousTitles: string[] = [];
 
   @IsNumeric
@@ -253,7 +253,7 @@ class Document extends ParanoidModel {
   @Column
   publishedAt: Date | null;
 
-  @Column(DataType.ARRAY(DataType.UUID))
+  @Column(DataType.JSON)
   collaboratorIds: string[] = [];
 
   // getters

@@ -1,5 +1,6 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    return;
     let tableName, constraintName;
     tableName = "user_authentications";
     constraintName = "user_authentications_authenticationProviderId_fkey";
@@ -18,6 +19,7 @@ module.exports = {
         on delete cascade`);
   },
   down: async (queryInterface, Sequelize) => {
+    return;
     let tableName, constraintName;
     tableName = "user_authentications";
     constraintName = "user_authentications_authenticationProviderId_fkey";

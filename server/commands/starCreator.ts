@@ -44,7 +44,7 @@ export default async function starCreator({
       order: [
         // using LC_COLLATE:"C" because we need byte order to drive the sorting
         // find only the first star so we can create an index before it
-        Sequelize.literal('"star"."index" collate "C"'),
+        Sequelize.literal('"star"."index"'),
         ["updatedAt", "DESC"],
       ],
       transaction,

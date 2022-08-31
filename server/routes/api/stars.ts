@@ -70,10 +70,7 @@ router.post("stars.list", auth(), pagination(), async (ctx) => {
       where: {
         userId: user.id,
       },
-      order: [
-        Sequelize.literal('"star"."index" collate "C"'),
-        ["updatedAt", "DESC"],
-      ],
+      order: [Sequelize.literal('"star"."index"'), ["updatedAt", "DESC"]],
       offset: ctx.state.pagination.offset,
       limit: ctx.state.pagination.limit,
     }),

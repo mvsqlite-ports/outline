@@ -1,5 +1,6 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    return;
     let tableName, constraintName;
     tableName = "collection_users";
     constraintName = "collection_users_collectionId_fkey";
@@ -33,6 +34,7 @@ module.exports = {
         on delete cascade`);
   },
   down: async (queryInterface, Sequelize) => {
+    return;
     let tableName, constraintName;
     tableName = "collection_users";
     constraintName = "collection_users_collectionId_fkey";

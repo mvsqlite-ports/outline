@@ -37,7 +37,7 @@ module.exports = {
             allowNull: false,
           },
           events: {
-            type: Sequelize.ARRAY(Sequelize.STRING),
+            type: Sequelize.JSON,
             allowNull: false,
           },
           createdAt: {

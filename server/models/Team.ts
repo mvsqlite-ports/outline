@@ -102,7 +102,7 @@ class Team extends ParanoidModel {
   inviteRequired: boolean;
 
   @Default(true)
-  @Column(DataType.JSONB)
+  @Column(DataType.JSON)
   signupQueryParams: { [key: string]: string } | null;
 
   @Default(true)

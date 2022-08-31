@@ -23,11 +23,11 @@ module.exports = {
         allowNull: true,
       },
       createdAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       updatedAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       userId: {
@@ -48,7 +48,6 @@ module.exports = {
     });
     await queryInterface.addColumn("documents", "lastModifiedById", {
       type: "UUID",
-      allowNull: false,
       references: {
         model: "users",
       },

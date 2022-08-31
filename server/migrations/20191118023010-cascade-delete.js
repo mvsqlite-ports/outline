@@ -5,6 +5,7 @@ const tableName = "revisions";
 const constraintNames = ["revisions_documentId_fkey", "documentId_foreign_idx"];
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    return;
     let error;
 
     for (const constraintName of constraintNames) {
@@ -24,6 +25,7 @@ module.exports = {
     throw error;
   },
   down: async (queryInterface, Sequelize) => {
+    return;
     let error;
 
     for (const constraintName of constraintNames) {

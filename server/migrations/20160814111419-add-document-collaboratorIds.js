@@ -1,7 +1,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.addColumn("documents", "collaboratorIds", {
-      type: Sequelize.ARRAY(Sequelize.UUID),
+      type: Sequelize.JSON,
     });
   },
   down: async (queryInterface, Sequelize) => {

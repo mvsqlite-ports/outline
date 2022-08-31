@@ -180,7 +180,7 @@ class Collection extends ParanoidModel {
   @Column
   maintainerApprovalRequired: boolean;
 
-  @Column(DataType.JSONB)
+  @Column(DataType.JSON)
   documentStructure: NavigationNode[] | null;
 
   @Default(true)
@@ -189,7 +189,7 @@ class Collection extends ParanoidModel {
 
   @Default({ field: "title", direction: "asc" })
   @Column({
-    type: DataType.JSONB,
+    type: DataType.JSON,
     validate: {
       isSort(value: CollectionSort) {
         if (
@@ -382,7 +382,7 @@ class Collection extends ParanoidModel {
       },
       order: [
         // using LC_COLLATE:"C" because we need byte order to drive the sorting
-        Sequelize.literal('"collection"."index" collate "C"'),
+        Sequelize.literal('"collection"."index"'),
         ["updatedAt", "DESC"],
       ],
     });

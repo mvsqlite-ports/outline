@@ -63,7 +63,7 @@ module.exports = {
         allowNull: true,
       },
       scopes: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
+        type: Sequelize.JSON,
         allowNull: true,
       },
       providerId: {

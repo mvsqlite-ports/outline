@@ -34,10 +34,7 @@ export default async function removeIndexCollision(
     },
     attributes: ["id", "index"],
     limit: 1,
-    order: [
-      Sequelize.literal('"collection"."index" collate "C"'),
-      ["updatedAt", "DESC"],
-    ],
+    order: [Sequelize.literal('"collection"."index"'), ["updatedAt", "DESC"]],
   });
   const nextCollectionIndex = nextCollection.length
     ? nextCollection[0].index

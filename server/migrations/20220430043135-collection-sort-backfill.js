@@ -2,8 +2,9 @@
 
 module.exports = {
   up: async (queryInterface) => {
+    return;
     let again = 1;
-  
+
     while (again) {
       console.log("Backfilling collection sort…");
       const [, metadata] = await queryInterface.sequelize.query(`

@@ -43,7 +43,7 @@ module.exports = {
         },
       },
       events: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
+        type: Sequelize.JSON,
         allowNull: true,
       },
       settings: {

@@ -55,7 +55,7 @@ class WebhookSubscription extends ParanoidModel {
   @Column
   enabled: boolean;
 
-  @Column(DataType.ARRAY(DataType.STRING))
+  @Column(DataType.JSON)
   events: string[];
 
   @AllowNull

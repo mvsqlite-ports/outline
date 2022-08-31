@@ -3,9 +3,10 @@ module.exports = {
     await queryInterface.addColumn("teams", "subdomain", {
       type: Sequelize.STRING,
       allowNull: true,
-      unique: true,
     });
-    await queryInterface.addIndex("teams", ["subdomain"]);
+    await queryInterface.addIndex("teams", ["subdomain"], {
+      indicesType: 'UNIQUE',
+    });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.removeColumn("teams", "subdomain");

@@ -8,6 +8,7 @@ const constraintNames = [
 ];
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    return;
     let error;
 
     for (const constraintName of constraintNames) {
@@ -27,6 +28,7 @@ module.exports = {
     throw error;
   },
   down: async (queryInterface, Sequelize) => {
+    return;
     let error;
 
     for (const constraintName of constraintNames) {

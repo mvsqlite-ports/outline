@@ -47,10 +47,10 @@ class Integration<T = unknown> extends IdModel {
   @Column
   service: string;
 
-  @Column(DataType.JSONB)
+  @Column(DataType.JSON)
   settings: IntegrationSettings<T>;
 
-  @Column(DataType.ARRAY(DataType.STRING))
+  @Column(DataType.JSON)
   events: string[];
 
   // associations

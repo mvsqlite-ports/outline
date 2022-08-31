@@ -3,7 +3,6 @@ module.exports = {
     await queryInterface.addColumn("teams", "googleId", {
       type: Sequelize.STRING,
       allowNull: true,
-      unique: true,
     });
     await queryInterface.addColumn("teams", "avatarUrl", {
       type: Sequelize.STRING,
@@ -15,7 +14,9 @@ module.exports = {
       defaultValue: "slack",
     });
     await queryInterface.renameColumn("users", "slackId", "serviceId");
-    await queryInterface.addIndex("teams", ["googleId"]);
+    await queryInterface.addIndex("teams", ["googleId"], {
+      indicesType: 'UNIQUE',
+    });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.removeColumn("teams", "googleId");

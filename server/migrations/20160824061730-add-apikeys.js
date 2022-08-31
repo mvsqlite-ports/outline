@@ -20,15 +20,15 @@ module.exports = {
         allowNull: true,
       },
       createdAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       updatedAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       deletedAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: true,
       },
     });

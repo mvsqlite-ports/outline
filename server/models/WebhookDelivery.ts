@@ -25,16 +25,16 @@ class WebhookDelivery extends IdModel {
   @Column(DataType.INTEGER)
   statusCode: number;
 
-  @Column(DataType.JSONB)
+  @Column(DataType.JSON)
   requestBody: unknown;
 
-  @Column(DataType.JSONB)
+  @Column(DataType.JSON)
   requestHeaders: Record<string, string>;
 
   @Column(DataType.TEXT)
   responseBody: string;
 
-  @Column(DataType.JSONB)
+  @Column(DataType.JSON)
   responseHeaders: Record<string, string>;
 
   @Column(DataType.DATE)

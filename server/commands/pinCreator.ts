@@ -53,7 +53,7 @@ export default async function pinCreator({
       order: [
         // using LC_COLLATE:"C" because we need byte order to drive the sorting
         // find only the last pin so we can create an index after it
-        Sequelize.literal('"pin"."index" collate "C" DESC'),
+        Sequelize.literal('"pin"."index" DESC'),
         ["updatedAt", "ASC"],
       ],
     });

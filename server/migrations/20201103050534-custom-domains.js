@@ -5,7 +5,9 @@ module.exports = {
     await queryInterface.addColumn("teams", "domain", {
       type: Sequelize.STRING,
       allowNull: true,
-      unique: true,
+    });
+    await queryInterface.addIndex("teams", ["domain"], {
+      indicesType: 'UNIQUE',
     });
   },
   down: async (queryInterface, Sequelize) => {

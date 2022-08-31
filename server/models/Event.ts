@@ -38,7 +38,7 @@ class Event extends IdModel {
   @Column
   ip: string | null;
 
-  @Column(DataType.JSONB)
+  @Column(DataType.JSON)
   data: Record<string, any>;
 
   // hooks

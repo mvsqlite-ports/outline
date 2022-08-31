@@ -2,6 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    return;
     const searchDocument = `
     CREATE OR REPLACE FUNCTION documents_search_trigger() RETURNS trigger AS $$
     begin
@@ -16,6 +17,7 @@ module.exports = {
     await queryInterface.sequelize.query(searchDocument);
   },
   down: async (queryInterface, Sequelize) => {
+    return;
     const searchDocument = `
     CREATE OR REPLACE FUNCTION documents_search_trigger() RETURNS trigger AS $$
     begin

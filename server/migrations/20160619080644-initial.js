@@ -20,11 +20,11 @@ module.exports = {
         allowNull: true,
       },
       createdAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       updatedAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
     });
@@ -51,11 +51,11 @@ module.exports = {
         allowNull: true,
       },
       createdAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       updatedAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       teamId: {
@@ -104,11 +104,11 @@ module.exports = {
         allowNull: true,
       },
       createdAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       updatedAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       teamId: {
@@ -149,11 +149,11 @@ module.exports = {
         allowNull: true,
       },
       createdAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       updatedAt: {
-        type: "TIMESTAMP WITH TIME ZONE",
+        type: "DATETIME",
         allowNull: false,
       },
       userId: {
