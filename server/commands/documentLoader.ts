@@ -154,6 +154,12 @@ export default async function loadDocument({
     if (!team.sharing) {
       throw AuthorizationError();
     }
+
+    const fakeDate = new Date(0);
+
+    document.createdAt = fakeDate;
+    document.updatedAt = fakeDate;
+    document.publishedAt = fakeDate;
   } else {
     document = await Document.findByPk(id as string, {
       userId: user ? user.id : undefined,
