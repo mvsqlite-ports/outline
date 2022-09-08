@@ -83,12 +83,14 @@ export const renderShare = async (ctx: Context, next: Next) => {
     share = result.share;
     document = result.document;
 
+    /*
     if (share && !ctx.userAgent.isBot) {
       await share.update({
         lastAccessedAt: new Date(),
         views: Sequelize.literal("views + 1"),
       });
     }
+    */
   } catch (err) {
     // If the share or document does not exist, return a 404.
     ctx.status = 404;
